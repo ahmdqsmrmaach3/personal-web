@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Identity</title>
+
+
+<link rel="stylesheet" href="../css/variables.css">
+
+<link rel="stylesheet" href="../css/style.css">
+
+<link rel="stylesheet" href="../css/components.css">
+
+<link rel="stylesheet" href="../css/animation.css">
+
+
+</head>
+
+
+<body>
+
+
+<div class="identity-page">
+
+
+<div class="identity-card">
+
+
+<div class="identity-container">
+
+    <div class="identity-header">
+
+        <p class="system-label">
+            IDENTITY DATABASE
+        </p>
+
+        <h1 id="profileName">
+            NEXUS USER
+        </h1>
+
+        <p id="profileAbout">
+            Loading profile...
+        </p>
+
+    </div>
+
+
+    <div class="identity-grid">
+
+
+        <div class="info-card">
+
+            <span class="info-label">
+                CLASS
+            </span>
+
+            <strong id="profileClass">
+                --
+            </strong>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <span class="info-label">
+                AGE
+            </span>
+
+            <strong id="profileAge">
+                --
+            </strong>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <span class="info-label">
+                BIRTH
+            </span>
+
+            <strong id="profileBirth">
+                --
+            </strong>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <span class="info-label">
+                DREAM
+            </span>
+
+            <strong id="profileDream">
+                --
+            </strong>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="profile-section">
+
+        <h2>
+            HOBBIES
+        </h2>
+
+        <div id="hobbyList" class="tag-container"></div>
+
+    </div>
+
+
+    <div class="profile-section">
+
+        <h2>
+            SKILLS
+        </h2>
+
+        <div id="skillList"></div>
+
+    </div>
+
+
+    <div class="profile-section">
+
+        <h2>
+            EDUCATION
+        </h2>
+
+        <div id="educationList"></div>
+
+    </div>
+
+</div>
+
+
+
+<script src="../js/config.js"></script>
+
+<script>
+
+    document.getElementById("profileName").textContent =
+        PROFILE.name;
+
+    document.getElementById("profileAbout").textContent =
+        PROFILE.about;
+
+    document.getElementById("profileClass").textContent =
+        PROFILE.class;
+
+    document.getElementById("profileAge").textContent =
+        PROFILE.age;
+
+    document.getElementById("profileBirth").textContent =
+        PROFILE.birth;
+
+    document.getElementById("profileDream").textContent =
+        PROFILE.dream;
+
+
+    const hobbyList =
+        document.getElementById("hobbyList");
+
+    PROFILE.hobby.forEach(hobby => {
+
+        const tag = document.createElement("span");
+
+        tag.className = "hobby-tag";
+
+        tag.textContent = hobby;
+
+        hobbyList.appendChild(tag);
+
+    });
+
+
+    const skillList =
+        document.getElementById("skillList");
+
+    PROFILE.skills.forEach(skill => {
+
+        skillList.innerHTML += `
+
+            <div class="skill-item">
+
+                <div class="skill-header">
+
+                    <span>${skill.name}</span>
+
+                    <span>${skill.value}%</span>
+
+                </div>
+
+                <div class="skill-bar">
+
+                    <div
+                        class="skill-fill"
+                        style="width:${skill.value}%">
+                    </div>
+
+                </div>
+
+            </div>
+
+        `;
+
+    });
+
+
+    const educationList =
+        document.getElementById("educationList");
+
+    PROFILE.education.forEach((education, index) => {
+
+        educationList.innerHTML += `
+
+            <div class="education-item">
+
+                <span class="education-number">
+                    0${index + 1}
+                </span>
+
+                <span>
+                    ${education}
+                </span>
+
+            </div>
+
+        `;
+
+    });
+
+</script>
+
+
+</body>
+
+</html>

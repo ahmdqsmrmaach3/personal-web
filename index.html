@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NEXUS // PERSONAL INTERFACE</title>
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+>
+
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         CYBER BACKGROUND
+    ========================== -->
+
+    <div class="cyber-bg">
+
+        <canvas id="binaryCanvas"></canvas>
+
+        <canvas id="busCanvas"></canvas>
+
+        <canvas id="network"></canvas>
+
+
+        <!-- AI CORE -->
+
+        <div id="aiCore">
+
+            <div class="coreTitle">
+                AI CORE
+            </div>
+
+            <div id="coreMessage">
+                INITIALIZING...
+            </div>
+
+        </div>
+
+
+        <!-- HUD -->
+
+        <div class="hud">
+
+            <canvas id="hudCanvas"></canvas>
+
+
+            <div class="hud-top">
+
+                <span>
+                    NEXUS SYSTEM
+                </span>
+
+                <span id="systemStatus">
+                    ONLINE
+                </span>
+
+            </div>
+
+
+            <div class="hud-bottom">
+
+                <span>
+                    SIGNAL : 98%
+                </span>
+
+                <span id="coordinates">
+                    X:000 Y:000
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="grid"></div>
+
+        <div class="scan-line"></div>
+
+        <div class="glow glow-1"></div>
+
+        <div class="glow glow-2"></div>
+
+
+        <div class="hex-container">
+
+            <span class="hex"></span>
+            <span class="hex"></span>
+            <span class="hex"></span>
+            <span class="hex"></span>
+            <span class="hex"></span>
+            <span class="hex"></span>
+            <span class="hex"></span>
+            <span class="hex"></span>
+
+        </div>
+
+    </div>
+
+
+    <!-- SECONDARY BACKGROUND -->
+
+    <div class="background">
+
+        <div class="grid"></div>
+
+        <div class="scanline"></div>
+
+        <div class="glow"></div>
+
+    </div>
+
+
+    <!-- =========================
+         BOOT SCREEN
+    ========================== -->
+
+    <div id="boot-screen">
+
+        <div class="boot-container">
+
+            <h1 class="glitch">
+                LOADING
+            </h1>
+
+
+            <p class="boot-text">
+                INITIALIZING SYSTEM....
+            </p>
+
+
+            <div class="loading-box">
+
+                <div id="progress"></div>
+
+            </div>
+
+
+            <p id="status">
+                PRESS ENTER TO INITIALIZE
+            </p>
+
+
+            <button id="enterBtn">
+                ENTER SYSTEM
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         REGISTER SCREEN
+    ========================== -->
+
+    <div
+        id="register-screen"
+        class="hidden"
+    >
+
+        <div class="register-card">
+
+            <h2>
+                WELCOME USER
+            </h2>
+
+
+            <p>
+                Please enter your identity
+            </p>
+
+
+            <input
+                id="username"
+                type="text"
+                maxlength="20"
+                placeholder="Your Name"
+                autocomplete="name"
+            >
+
+
+            <button id="saveBtn">
+                CONFIRM
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         MAIN INTERFACE
+    ========================== -->
+
+    <div
+        id="main-interface"
+        class="hidden"
+    >
+
+
+        <!-- =====================
+             HOME
+        ====================== -->
+
+        <section class="hero">
+
+            <button id="accessBtn">
+                ACCESS
+            </button>
+
+
+            <div id="accessPanel">
+
+                <button onclick="openPage('about.html')">
+                 <img src="assets/icons/identity.svg" alt="">
+                 <span>IDENTITY</span>
+                </button>
+                    
+                
+                    
+                <button onclick="openPage('dashboard.html')">
+                 <img src="assets/icons/dashboard.svg" alt="">
+                 <span>DASHBOARD</span>
+                </button>
+
+
+                 <button onclick="openPage('games.html')">
+                  <img src="assets/icons/games.svg" alt="">
+                  <span>GAMES</span>
+                </button>
+
+            </div>
+
+
+            <div
+                class="glass-panel"
+                id="glassPanel"
+            >
+
+                <p class="system-label">
+                    USER VERIFIED
+                </p>
+
+
+                <p id="welcomeText"></p>
+
+
+                
+                <h1
+                  id="heroName"
+                  class="glitch-text"
+                  ></h1>
+
+                  <p id="heroWelcome"></p>
+
+
+                <div class="access-buttons">
+
+    <button onclick="openPage('about.html')">
+
+        <img
+            src="assets/icons/identity.svg"
+            alt=""
+        >
+
+        <span>
+            IDENTITY
+        </span>
+
+    </button>
+
+
+    <button onclick="openPage('dashboard.html')">
+
+        <img
+            src="assets/icons/dashboard.svg"
+            alt=""
+        >
+
+        <span>
+            DASHBOARD
+        </span>
+
+    </button>
+
+
+    <button onclick="openPage('games.html')">
+
+        <img
+            src="assets/icons/games.svg"
+            alt=""
+        >
+
+        <span>
+            GAMES
+        </span>
+
+    </button>
+
+</div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================
+             IDENTITY
+        ====================== -->
+
+        <section
+            id="identity-section"
+            class="page-section"
+        >
+
+            <div class="identity-container">
+
+                <div
+    class="profile-avatar"
+    id="profileAvatar"
+    onclick="this.classList.toggle('avatar-active')"
+>
+
+    <img
+        src="assets/images/profile/8.jpeg"
+        alt="Profile photo"
+    >
+
+    <span class="avatar-scan">
+        IDENTITY // VERIFIED
+    </span>
+
+    <span class="avatar-ring"></span>
+
+</div>
+
+                <p class="system-label">
+                    IDENTITY DATABASE
+                </p>
+
+
+                <h1 id="profileName"
+                class="glitch-text">
+                    NEXUS USER
+                </h1>
+
+
+                <p id="profileAbout">
+                    Loading profile...
+                </p>
+
+
+                <div class="identity-grid">
+
+
+                    <div class="info-card">
+
+                        <span class="info-label">
+                            CLASS
+                        </span>
+
+                        <strong id="profileClass">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-card">
+
+                        <span class="info-label">
+                            AGE
+                        </span>
+
+                        <strong id="profileAge">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-card">
+
+                        <span class="info-label">
+                            BIRTH
+                        </span>
+
+                        <strong id="profileBirth">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-card">
+
+                        <span class="info-label">
+                            DREAM
+                        </span>
+
+                        <strong id="profileDream">
+                            --
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="profile-section">
+
+                    <h2>
+                        HOBBIES
+                    </h2>
+
+
+                    <div
+                        id="hobbyList"
+                        class="tag-container"
+                    ></div>
+
+                </div>
+
+
+                <div class="profile-section">
+
+                    <h2>
+                        SKILLS
+                    </h2>
+
+
+                    <div id="skillList"></div>
+
+                </div>
+
+
+                <div class="profile-section">
+
+                    <h2>
+                        EDUCATION
+                    </h2>
+
+
+                    <div id="educationList"></div>
+
+                </div>
+
+
+                <button
+                    class="page-back"
+                    data-target="home"
+                >
+                    BACK
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================
+             DASHBOARD
+        ====================== -->
+
+        <section
+            id="dashboard-section"
+            class="page-section"
+        >
+
+            <div class="dashboard-container">
+
+                <p class="system-label">
+                    NEXUS // DASHBOARD
+                </p>
+
+
+                <h1 class="glitch-text">
+                    SYSTEM OVERVIEW
+                </h1>
+
+
+                <p class="dashboard-subtitle">
+                    Personal interface monitoring system.
+                </p>
+
+
+                <!-- CLOCK -->
+
+                <div class="clock-card">
+
+                    <span class="info-label">
+                        LOCAL SYSTEM TIME
+                    </span>
+
+
+                    <div id="clock">
+                        00:00:00
+                    </div>
+
+
+                    <div id="date">
+                        Loading date...
+                    </div>
+
+                </div>
+
+
+                <!-- STATUS -->
+
+                <div class="dashboard-grid">
+
+
+                    <div class="dashboard-card">
+
+                        <span class="info-label">
+                            SYSTEM
+                        </span>
+
+                        <strong class="online">
+                            ONLINE
+                        </strong>
+
+                    </div>
+
+
+                    <div class="dashboard-card">
+
+                        <span class="info-label">
+                            NETWORK
+                        </span>
+
+                        <strong>
+                            STABLE
+                        </strong>
+
+                    </div>
+
+
+                    <div class="dashboard-card">
+
+                        <span class="info-label">
+                            USER
+                        </span>
+
+                        <strong id="dashboardUser">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                    <div class="dashboard-card">
+
+                        <span class="info-label">
+                            VERSION
+                        </span>
+
+                        <strong>
+                            NEXUS 1.0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ACTIVITY -->
+
+                <div class="dashboard-section">
+
+                    <h2>
+                        SYSTEM ACTIVITY
+                    </h2>
+
+
+                    <div class="activity">
+
+
+                        <div class="activity-item">
+
+                            <span class="activity-dot"></span>
+
+
+                            <div>
+
+                                <strong>
+                                    Interface initialized
+                                </strong>
+
+                                <small>
+                                    System boot completed
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="activity-item">
+
+                            <span class="activity-dot"></span>
+
+
+                            <div>
+
+                                <strong>
+                                    User authenticated
+                                </strong>
+
+                                <small>
+                                    Identity verified
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="activity-item">
+
+                            <span class="activity-dot"></span>
+
+
+                            <div>
+
+                                <strong>
+                                    Network connected
+                                </strong>
+
+                                <small>
+                                    Background systems online
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="page-back"
+                    data-target="home"
+                >
+                    BACK
+                </button>
+
+            </div>
+
+        </section>
+        <section
+    id="games-section"
+    class="page-section"
+>
+
+    <div class="games-container">
+
+        <p class="system-label">
+            NEXUS // GAMES
+        </p>
+
+        <h1 class="glitch-text">
+            SYSTEM GAMES
+        </h1>
+
+        <p class="games-subtitle">
+            Select a game module to initialize.
+        </p>
+
+
+        <div class="game-grid">
+
+            <button
+                class="game-card"
+                data-game="memory"
+            >
+
+                <span class="game-number">
+                    01
+                </span>
+
+                <strong>
+                    MEMORY GRID
+                </strong>
+
+                <small>
+                    Memorize the pattern.
+                </small>
+
+            </button>
+
+
+            <button
+                class="game-card"
+                data-game="target"
+            >
+
+                <span class="game-number">
+                    02
+                </span>
+
+                <strong>
+                    DATA TARGET
+                </strong>
+
+                <small>
+                    Find the target.
+                </small>
+
+            </button>
+
+
+            <button
+                class="game-card"
+                data-game="math"
+            >
+
+                <span class="game-number">
+                    03
+                </span>
+
+                <strong>
+                    MATH CHALLENGE
+                </strong>
+
+                <small>
+                    Solve the equation.
+                </small>
+
+            </button>
+
+        </div>
+
+
+        <button
+            class="page-back"
+            data-target="home"
+        >
+            BACK
+        </button>
+
+    </div>
+
+</section>
+
+    </div>
+
+
+    <!-- =========================
+         RADAR
+    ========================== -->
+
+    <div id="radarBox">
+
+        <canvas id="radarCanvas"></canvas>
+
+
+        <div id="radarText">
+            SCANNING...
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         GLOBAL MUSIC
+    ========================== -->
+
+    <audio
+        id="bgMusic"
+        loop
+        preload="auto"
+    ></audio>
+
+
+    <!-- MINI MUSIC DISC -->
+
+    <div id="music-disc">
+
+        <div class="disc-inner"></div>
+
+
+        <span class="music-note">
+            ♪
+        </span>
+
+    </div>
+<div id="gameInstruction">
+
+    <div
+        class="game-instruction-box"
+        id="gameInstructionBox"
+    >
+
+        <div class="game-glitch-line">
+            NEXUS // GAME MODULE
+        </div>
+
+
+        <h2 id="instructionTitle">
+            GAME
+        </h2>
+
+
+        <p id="instructionText">
+            Loading instructions...
+        </p>
+
+
+        <button id="startGameBtn">
+            START GAME
+        </button>
+
+
+        <button id="closeGameInstruction">
+            CANCEL
+        </button>
+
+    </div>
+
+</div>
+
+    <!-- MUSIC PANEL -->
+
+<!-- MUSIC PANEL -->
+
+<div id="music-panel">
+
+
+    <div class="music-panel-header">
+
+        <span>
+            NEXUS AUDIO
+        </span>
+
+
+        <button id="closeMusic">
+            ×
+        </button>
+
+    </div>
+
+
+    <div class="now-playing">
+
+        <span class="info-label">
+            NOW PLAYING
+        </span>
+
+
+        <strong id="currentSong">
+            Default Song
+        </strong>
+
+    </div>
+
+
+    <div class="music-controls">
+
+        <button id="musicToggle">
+            ▶
+        </button>
+
+
+        <input
+            id="musicVolume"
+            type="range"
+            min="0"
+            max="1"
+            step="0.01"
+            value="0.35"
+        >
+
+    </div>
+
+
+    <div class="song-list">
+
+
+        <button
+            class="song-option active"
+            data-song="default.mp3"
+            data-name="Default Song"
+        >
+
+            <span>
+                01
+            </span>
+
+            <strong>
+                Default Song
+            </strong>
+
+        </button>
+
+
+        <button
+            class="song-option"
+            data-song="God-a-woman.mp3"
+            data-name="God is a woman"
+        >
+
+            <span>
+                02
+            </span>
+
+            <strong>
+                God is a woman-Ariana Grande
+            </strong>
+
+        </button>
+
+
+        <button
+            class="song-option"
+            data-song="confident.mp3"
+            data-name="confident"
+        >
+
+            <span>
+                03
+            </span>
+
+            <strong>
+                confident-justin bieber
+            </strong>
+
+        </button>
+
+
+        <button
+            class="song-option"
+            data-song="dangerous-women.mp3"
+            data-name="dangerous women"
+        >
+
+            <span>
+                04
+            </span>
+
+            <strong>
+                Dangerous Women-Ariana Grande
+            </strong>
+
+        </button>
+
+
+        <button
+            class="song-option"
+            data-song="sumandhing.mp3"
+            data-name="sumandhing"
+        >
+
+            <span>
+                05
+            </span>
+
+            <strong>
+                sumandhing
+            </strong>
+
+        </button>
+
+
+        <button
+            class="song-option"
+            data-song="MMG.mp3"
+            data-name="MMG"
+        >
+
+            <span>
+                06
+            </span>
+
+            <strong>
+                MMG-naykila
+            </strong>
+
+        </button>
+
+
+        <button
+            class="song-option"
+            data-song="havana.mp3"
+            data-name="havana"
+        >
+
+            <span>
+                07
+            </span>
+
+            <strong>
+                havana-camila cabello
+            </strong>
+
+        </button>
+
+
+    </div>
+
+</div>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+
+    <script src="js/config.js"></script>
+
+
+    <!-- LOAD PROFILE AFTER CONFIG -->
+
+    <script>
+
+        const profileName =
+            document.getElementById("profileName");
+
+        const profileAbout =
+            document.getElementById("profileAbout");
+
+        const profileClass =
+            document.getElementById("profileClass");
+
+        const profileAge =
+            document.getElementById("profileAge");
+
+        const profileBirth =
+            document.getElementById("profileBirth");
+
+        const profileDream =
+            document.getElementById("profileDream");
+
+
+        if (profileName) {
+
+            profileName.textContent =
+                PROFILE.name;
+
+        }
+
+
+        if (profileAbout) {
+
+            profileAbout.textContent =
+                PROFILE.about;
+
+        }
+
+
+        if (profileClass) {
+
+            profileClass.textContent =
+                PROFILE.class;
+
+        }
+
+
+        if (profileAge) {
+
+            profileAge.textContent =
+                PROFILE.age;
+
+        }
+
+
+        if (profileBirth) {
+
+            profileBirth.textContent =
+                PROFILE.birth;
+
+        }
+
+
+        if (profileDream) {
+
+            profileDream.textContent =
+                PROFILE.dream;
+
+        }
+
+
+        const hobbyList =
+            document.getElementById("hobbyList");
+
+
+        if (hobbyList) {
+
+            PROFILE.hobby.forEach(hobby => {
+
+                const tag =
+                    document.createElement("span");
+
+
+                tag.className =
+                    "hobby-tag";
+
+
+                tag.textContent =
+                    hobby;
+
+
+                hobbyList.appendChild(tag);
+
+            });
+
+        }
+
+
+        const skillList =
+            document.getElementById("skillList");
+
+
+        if (skillList) {
+
+            PROFILE.skills.forEach(skill => {
+
+                skillList.innerHTML += `
+
+                    <div class="skill-item">
+
+                        <div class="skill-header">
+
+                            <span>
+                                ${skill.name}
+                            </span>
+
+                            <span>
+                                ${skill.value}%
+                            </span>
+
+                        </div>
+
+
+                        <div class="skill-bar">
+
+                            <div
+                                class="skill-fill"
+                                style="width:${skill.value}%"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+                `;
+
+            });
+
+        }
+
+
+        const educationList =
+            document.getElementById(
+                "educationList"
+            );
+
+
+        if (educationList) {
+
+            PROFILE.education.forEach(
+                (education, index) => {
+
+                    educationList.innerHTML += `
+
+                        <div class="education-item">
+
+                            <span
+                                class="education-number"
+                            >
+                                ${String(index + 1)
+                                    .padStart(2, "0")}
+                            </span>
+
+                            <span>
+                                ${education}
+                            </span>
+
+                        </div>
+
+                    `;
+
+                }
+            );
+
+        }
+
+    </script>
+
+
+    <!-- EFFECT SCRIPTS -->
+
+    <script src="js/network.js"></script>
+    <script src="js/effects.js"></script>
+    <script src="js/hud.js"></script>
+    <script src="js/core.js"></script>
+    <script src="js/radar.js"></script>
+    <script src="js/binary.js"></script>
+    <script src="js/bus.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/music.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/games.js"></script>
+    <script src="js/glitch.js"></script>
+    <script src="js/app.js"></script>
+
+
+</body>
+
+</html>

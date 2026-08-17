@@ -1,0 +1,947 @@
+/* =========================================
+   NEXUS RESPONSIVE
+   MOBILE FIRST
+========================================= */
+
+
+/* =========================================
+   TABLET / SMALL LAPTOP
+========================================= */
+
+@media (max-width: 768px) {
+
+    .hex {
+
+        width:
+            55px;
+
+        height:
+            65px;
+
+        opacity:
+            .55;
+
+    }
+
+
+    .glitch {
+
+        font-size:
+            3rem;
+
+        letter-spacing:
+            8px;
+
+    }
+
+
+    #welcomeText {
+
+        font-size:
+            2rem;
+
+        letter-spacing:
+            5px;
+
+        max-width:
+            94vw;
+
+        overflow-wrap:
+            anywhere;
+
+    }
+
+
+    .register-card {
+
+        width:
+            92%;
+
+        padding:
+            25px;
+
+        box-sizing:
+            border-box;
+
+    }
+
+
+    .glass-panel {
+
+        width:
+            90%;
+
+        max-width:
+            520px;
+
+        padding:
+            35px 20px;
+
+    }
+
+
+    .access-buttons {
+
+        gap:
+            10px;
+
+        flex-wrap:
+            wrap;
+
+    }
+
+
+    .access-buttons button {
+
+        padding:
+            12px 18px;
+
+        font-size:
+            .72rem;
+
+    }
+
+
+    .aiCore {
+
+        max-width:
+            calc(100vw - 40px);
+
+    }
+
+}
+
+
+/* =========================================
+   PHONE
+========================================= */
+
+@media (max-width: 600px) {
+
+
+    /* =========================
+       GENERAL
+    ========================= */
+
+    html,
+    body {
+
+        width:
+            100%;
+
+        max-width:
+            100%;
+
+        overflow-x:
+            hidden;
+
+    }
+
+
+    body {
+
+        font-size:
+            14px;
+
+    }
+
+
+    /* =========================
+       HOME
+    ========================= */
+
+    .hero {
+
+        width:
+            100%;
+
+        min-height:
+            100svh;
+
+        box-sizing:
+            border-box;
+
+        padding:
+            80px 15px 90px;
+
+    }
+
+
+    .glass-panel {
+
+        width:
+            92%;
+
+        max-width:
+            430px;
+
+        padding:
+            30px 18px;
+
+        border-radius:
+            20px;
+
+    }
+
+
+    #welcomeText {
+
+        font-size:
+            clamp(
+                1.25rem,
+                7vw,
+                1.8rem
+            );
+
+        letter-spacing:
+            4px;
+
+        line-height:
+            1.3;
+
+    }
+
+
+    #heroName {
+
+        font-size:
+            clamp(
+                2rem,
+                12vw,
+                3rem
+            );
+
+        letter-spacing:
+            3px;
+
+        max-width:
+            90vw;
+
+        line-height:
+            1.15;
+
+    }
+
+
+    #heroWelcome {
+
+        font-size:
+            .72rem;
+
+        line-height:
+            1.7;
+
+        letter-spacing:
+            2px;
+
+    }
+
+
+    /* =========================
+       ACCESS
+    ========================= */
+
+    #accessBtn {
+
+        left:
+            14px;
+
+        bottom:
+            14px;
+
+        padding:
+            8px 12px;
+
+        font-size:
+            .62rem;
+
+    }
+
+
+    #accessPanel {
+
+        left:
+            14px;
+
+        bottom:
+            62px;
+
+        width:
+            160px;
+
+        max-width:
+            calc(100vw - 28px);
+
+    }
+
+
+    #accessPanel button {
+
+        width:
+            100%;
+
+        box-sizing:
+            border-box;
+
+        padding:
+            11px 10px;
+
+        font-size:
+            .68rem;
+
+    }
+
+
+    .access-buttons {
+
+        display:
+            grid;
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            10px;
+
+        margin-top:
+            28px;
+
+    }
+
+
+    .access-buttons button {
+
+        width:
+            100%;
+
+        min-height:
+            44px;
+
+        box-sizing:
+            border-box;
+
+    }
+
+
+    /* =========================
+       IDENTITY
+    ========================= */
+
+    .identity-container {
+
+        width:
+            88%;
+
+        max-width:
+            430px;
+
+        padding:
+            25px 0 80px;
+
+    }
+
+
+    .identity-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .identity-header h1 {
+
+        font-size:
+            2rem;
+
+        letter-spacing:
+            2px;
+
+    }
+
+
+    .identity-container > h1 {
+
+        font-size:
+            clamp(
+                1.8rem,
+                9vw,
+                2.7rem
+            );
+
+        letter-spacing:
+            2px;
+
+    }
+
+
+    .profile-section {
+
+        margin-top:
+            35px;
+
+    }
+
+
+    .info-card {
+
+        padding:
+            18px;
+
+    }
+
+
+    .education-item {
+
+        gap:
+            12px;
+
+    }
+
+
+    /* =========================
+       DASHBOARD
+    ========================= */
+
+    .dashboard-container {
+
+        width:
+            88%;
+
+        max-width:
+            430px;
+
+        margin:
+            0 auto;
+
+        box-sizing:
+            border-box;
+
+    }
+
+
+    .dashboard-container > h1 {
+
+        font-size:
+            clamp(
+                1.8rem,
+                9vw,
+                2.7rem
+            );
+
+        letter-spacing:
+            2px;
+
+    }
+
+
+    .dashboard-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap:
+            10px;
+
+    }
+
+
+    .dashboard-card {
+
+        min-width:
+            0;
+
+        box-sizing:
+            border-box;
+
+        padding:
+            16px 12px;
+
+    }
+
+
+    #clock {
+
+        font-size:
+            clamp(
+                2.2rem,
+                11vw,
+                3.5rem
+            );
+
+        letter-spacing:
+            4px;
+
+    }
+
+
+    /* =========================
+       MUSIC
+    ========================= */
+
+    .song-option {
+
+        padding:
+            14px;
+
+    }
+
+
+    .music-controls {
+
+        gap:
+            12px;
+
+    }
+
+
+    #music-disc {
+
+        right:
+            14px;
+
+        bottom:
+            14px;
+
+        width:
+            42px;
+
+        height:
+            42px;
+
+    }
+
+
+    #music-panel {
+
+        right:
+            12px;
+
+        bottom:
+            68px;
+
+        width:
+            calc(100vw - 24px);
+
+        max-width:
+            430px;
+
+        max-height:
+            68vh;
+
+    }
+
+
+    /* =========================
+       GAME HUB
+    ========================= */
+
+    .games-container {
+
+        width:
+            88%;
+
+        max-width:
+            430px;
+
+        padding:
+            30px 0 80px;
+
+    }
+
+
+    .game-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .game-card {
+
+        min-height:
+            140px;
+
+        padding:
+            20px;
+
+    }
+
+
+    .game-instruction-box {
+
+        width:
+            100%;
+
+        max-width:
+            430px;
+
+        padding:
+            22px;
+
+        border-radius:
+            14px;
+
+        box-sizing:
+            border-box;
+
+    }
+
+
+    .game-instruction-box h2 {
+
+        font-size:
+            1.4rem;
+
+    }
+
+
+    .game-instruction-box p {
+
+        font-size:
+            .85rem;
+
+    }
+
+
+    #startGameBtn,
+    #closeGameInstruction {
+
+        min-height:
+            44px;
+
+        padding:
+            10px 15px;
+
+    }
+
+
+    /* =========================
+       MEMORY GRID
+    ========================= */
+
+    #gameRuntime {
+
+        padding:
+            12px;
+
+    }
+
+
+    .memory-game {
+
+        width:
+            100%;
+
+        max-width:
+            430px;
+
+        padding:
+            16px;
+
+    }
+
+
+    .memory-grid {
+
+        gap:
+            7px;
+
+    }
+
+
+    .memory-cell {
+
+        min-width:
+            0;
+
+        border-radius:
+            8px;
+
+    }
+
+
+    .memory-info {
+
+        gap:
+            6px;
+
+    }
+
+
+    .memory-info > div {
+
+        padding:
+            8px 5px;
+
+    }
+
+
+    /* =========================
+       DATA TARGET
+    ========================= */
+
+    .target-game {
+
+        width:
+            100%;
+
+        max-width:
+            430px;
+
+        padding:
+            16px;
+
+    }
+
+
+    .target-arena {
+
+        min-height:
+            290px;
+
+        max-height:
+            60vh;
+
+    }
+
+
+    .data-target {
+
+        width:
+            56px;
+
+        height:
+            56px;
+
+    }
+
+
+    /* =========================
+       MATH
+    ========================= */
+
+    .math-game {
+
+        width:
+            100%;
+
+        max-width:
+            430px;
+
+        padding:
+            16px;
+
+    }
+
+
+    .math-question-box {
+
+        padding:
+            24px 12px;
+
+    }
+
+
+    #mathQuestion {
+
+        font-size:
+            clamp(
+                1.9rem,
+                10vw,
+                3rem
+            );
+
+    }
+
+
+    .math-answer {
+
+        min-height:
+            68px;
+
+        font-size:
+            1.05rem;
+
+    }
+
+
+    /* =========================
+       RADAR
+    ========================= */
+
+    #radarBox {
+
+        left:
+            15px;
+
+        bottom:
+            70px;
+
+        width:
+            130px;
+
+        height:
+            130px;
+
+    }
+
+
+    #radarCanvas {
+
+        width:
+            130px;
+
+        height:
+            130px;
+
+    }
+
+
+    #radarText {
+
+        font-size:
+            .55rem;
+
+        letter-spacing:
+            2px;
+
+    }
+
+
+    /* =========================
+       AI CORE
+    ========================= */
+
+    #aiCore {
+
+        top:
+            15px;
+
+        right:
+            15px;
+
+        width:
+            min(
+                230px,
+                calc(100vw - 30px)
+            );
+
+        box-sizing:
+            border-box;
+
+        padding:
+            14px;
+
+    }
+
+
+    #coreMessage {
+
+        font-size:
+            .78rem;
+
+    }
+
+
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 380px) {
+
+
+    #welcomeText {
+
+        letter-spacing:
+            3px;
+
+    }
+
+
+    .glass-panel {
+
+        padding:
+            25px 14px;
+
+    }
+
+
+    .identity-container,
+    .dashboard-container,
+    .games-container {
+
+        width:
+            90%;
+
+    }
+
+
+    .dashboard-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .memory-game,
+    .target-game,
+    .math-game {
+
+        padding:
+            14px;
+
+    }
+
+
+    .memory-grid {
+
+        gap:
+            5px;
+
+    }
+
+
+    .data-target {
+
+        width:
+            52px;
+
+        height:
+            52px;
+
+    }
+
+
+    .math-answers {
+
+        gap:
+            8px;
+
+    }
+
+
+    .math-answer {
+
+        min-height:
+            62px;
+
+    }
+
+
+    #radarBox {
+
+        transform:
+            scale(.85);
+
+        transform-origin:
+            bottom left;
+
+    }
+
+}
